@@ -29,18 +29,142 @@
 						<!-- Content -->
 							<section id="content" class="main">
 								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
-								<h1>Variables</h1>
+								<h1><strong>Variables</strong></h1>
 								<p>(Variable) คือ ตัวแปร ที่ผู้เขียนโปรแกรมประกาศขึ้น สำหรับใช้เก็บข้อมูลที่ต้องการ
 									เพื่อนำไปใช้ในการเขียนโปรแกรม เพื่อทำการประมวลผลข้อมูล เก็บข้อมูลในหน่วยความจำขณะที่
 									โปรแกรมทำงาน เช่น constant และ VAT เป็นต้น</p>
-								<p>Valid Variable Names(ชื่อตัวแปรที่ถูกต้อง)<br />
+								<p><h3>Valid Variable Names (ชื่อตัวแปรที่ถูกต้อง)</h3>
 									-การใช้อักษรตัวพิมพ์ใหญ่และอักษรพิมพ์เล็กมีความแตกต่างกัน (Case-sensitive) <br />
 									-ตัวอักษรตัวแรกต้องเป็นภาษาอังกฤษ (A-Z, a-z) ตามด้วยตัวอักษร หรือตัวเลขใดๆ ก็ได้<br />
 									-ชื่อตัวแปรห้ามมีช่องว่าง จุดทศนิยม และสัญลักษณ์พิเศษ ยกเว้น underscore "_" เท่านั้น<br />
 									-ห้ามใช้เครื่องหมายต่อไปนี้ในการตั้งชื่อตัวแปร !,@, #, $, %, ^, &, *, (, ), -, =, \, |, +, ~, .
 								</p>
-								<h2>Tempus veroeros</h2>
-								<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+								<p><h3>Reserved word</h3>
+									-ห้ามใช้คำสงวนเป็นชื่อตัวแปร</p>
+									<table>
+										<tr>
+										  <td>and</td>
+										  <td>except</td>
+										  <td>lambda</td>
+										</tr>
+										<tr>
+										  <td>as</td>
+										  <td>finally</td>
+										  <td>nonlocal</td>
+										</tr>
+										<tr>
+										  <td>assert</td>
+										  <td>FALSE</td>
+										  <td>None</td>
+										</tr>
+										<tr>
+										  <td>break</td>
+										  <td>for</td>
+										  <td>not</td>
+										</tr>
+										<tr>
+										  <td>class</td>
+										  <td>from</td>
+										  <td>or</td>
+										</tr>
+										<tr>
+										  <td>continue</td>
+										  <td>global</td>
+										  <td>pass</td>
+										</tr>
+										<tr>
+											<td>def</td>
+											<td>if</td>
+											<td>raise</td>
+										  </tr>
+										  <tr>
+											<td>del</td>
+											<td>import</td>
+											<td>return</td>
+										  </tr>
+										  <tr>
+											<td>elif</td>
+											<td>in</td>
+											<td>TRUE</td>
+										  </tr>
+										  <tr>
+											<td>else</td>
+											<td>is</td>
+											<td>try</td>
+										  </tr>
+										  <tr>
+											<td>with</td>
+											<td>while</td>
+											<td>yield</td>
+										  </tr>
+									  </table>                                                                                                                                                        
+								<h1><strong>Data type</strong></h1>
+								<p><h3>Data types (ชนิดข้อมูล)</h3>
+									1 Basic Data Types :<br/>
+									  1. Numeric :<br/>
+										1.1 Integer<br/>
+									   	1.2 Floating point<br/>
+									  2. Boolean<br/>
+									  3. String<br/>
+									2 Composite Data Types :<br/>
+									  1. List<br/>
+									  2. Tuple<br/>
+									  3. Dictionary<br/>
+									  4. Set</p>
+								<h1><strong>Numbers</strong></h1>
+								<p>-เลขจำนวนเต็ม (Integers)<br>
+									<img src="images/number.png"/></p>
+								<p>-ตัวเลขทศนิยม หรือจำนวนจริง (Float)<br>
+									<img src="images/float.jpg"/></p>
+								<h1><strong>Boolean</strong></h1>
+								<p>ใช้คำย่อในการเขียนโปรแกรมคือ bool เป็นชนิดของตัวแปรที่สามารถเก็บค่า
+									ลอจิก จริง (True) หรือ เท็จ (False)<br>
+								<img src="images/boolean.png"/></p>
+								<h1><strong>String</strong></h1>
+								<p><table style="background-color: aqua">
+								sentence = 'She said, "That is a great tasting apple!"'<br>
+								sentence = "That's a great tasting apple!"<br>
+								double = "She said, \"That's a great tasting apple!\""<br>
+								sentence = 'She said, "That\'s a great tasting apple!"'
+								</table></p>
+								<h1><strong>Operators</strong></h1>
+								<p>ตัวดำเนินการ (Operator) คือ สัญลักษณ์ที่ใช้ในการแทนการกระทำอย่างใดอย่างหนึ่งกับข้อมูล
+									เช่น +, -, *, **, /, //, %, =, >, <, !=, ==, <> เป็นต้น</p>
+								<p><h3>Arithmetic Operators</h3>
+								<img src="images/operator2.png"/><br>
+								<h3>Example</h3>
+								<img src="images/operator3.png"/></p>
+								<p><h3>Operators Precedence</h3>
+									<img src="images/operator4.png"/><br></p>
+								<p><h3>Comparison Operators</h3>
+									<img src="images/operator5.png"/><br>
+									<h3>Example</h3>
+									<img src="images/operator6.png"/></p>
+								<p><h3>Logical Operators</h3>
+									<img src="images/operator7.png"/><br></p>
+								<p><h3>Bitwise Operators</h3>
+									<img src="images/operator8.png"/><br></p>
+								<p><h3>Identity Operators</h3>
+									<img src="images/operator9.png"/><br>
+									<h3>Example</h3>
+									<img src="images/operator10.png"/></p>
+								<p><h3>Membership Operators</h3>
+									<img src="images/operator11.png"/><br>
+									<h3>Example</h3>
+									<img src="images/operator12.png"/></p>
+								<h1><strong>Input</strong></h1>
+								<p>คือการรับค่าข้อมูลจากแป้นพิมพ์<br>
+									-การรับค่าข้อมูลที่เป็นสตริง หรืออ๊อปเจ็กต์<br>
+									-การรับค่าข้อมูลที่เป็นตัวเลข หรือจำนวนจริง<br>
+									<img src="images/input.png"/>
+									<h3>Read multiple values from keyboard</h3>
+								<img src="images/input2.png"/><br>
+								<img src="images/input3.png"/><br>
+								<img src="images/input4.png"/></p>
+								<h1><strong>Comments</strong></h1>
+								<p>สัญลักษณ์คอมเม้นต์ข้อความในภาษาไพธอน คือ เครื่องหมาย # โดยหากเครื่องหมายนี้อยู่หน้าบรรทัดใด ขณะรันโปรแกรมไพธอนก็จะไม่นำบรรทัดนั้นมารัน<br>
+									<img src="images/comment.png"/>
+								</p>
 							</section>
 
 					</div>
