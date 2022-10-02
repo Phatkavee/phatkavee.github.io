@@ -130,37 +130,19 @@
 								<h1><strong>Operators</strong></h1>
 								<p>ตัวดำเนินการ (Operator) คือ สัญลักษณ์ที่ใช้ในการแทนการกระทำอย่างใดอย่างหนึ่งกับข้อมูล
 									เช่น +, -, *, **, /, //, %, =, >, <, !=, ==, <> เป็นต้น</p>
-								<p><h3>Arithmetic Operators</h3>
-								<img src="images/operator2.png"/><br>
-								<h3>Example</h3>
-								<img src="images/operator3.png"/></p>
 								<p><h3>Operators Precedence</h3>
 									<img src="images/operator4.png"/><br></p>
-								<p><h3>Comparison Operators</h3>
-									<img src="images/operator5.png"/><br>
-									<h3>Example</h3>
-									<img src="images/operator6.png"/></p>
-								<p><h3>Logical Operators</h3>
-									<img src="images/operator7.png"/><br></p>
-								<p><h3>Bitwise Operators</h3>
-									<img src="images/operator8.png"/><br></p>
-								<p><h3>Identity Operators</h3>
-									<img src="images/operator9.png"/><br>
-									<h3>Example</h3>
-									<img src="images/operator10.png"/></p>
-								<p><h3>Membership Operators</h3>
-									<img src="images/operator11.png"/><br>
-									<h3>Example</h3>
-									<img src="images/operator12.png"/></p>
 								<h1><strong>Input</strong></h1>
 								<p>คือการรับค่าข้อมูลจากแป้นพิมพ์<br>
 									-การรับค่าข้อมูลที่เป็นสตริง หรืออ๊อปเจ็กต์<br>
 									-การรับค่าข้อมูลที่เป็นตัวเลข หรือจำนวนจริง<br>
-									<img src="images/input.png"/>
-									<h3>Read multiple values from keyboard</h3>
-								<img src="images/input2.png"/><br>
-								<img src="images/input3.png"/><br>
-								<img src="images/input4.png"/></p>
+									<div class="text">
+										a,b,c = [e for e in input().split()] หรือ a,b,c = input().split() อ่านสตริง 3 ตัว<br><br>
+										x,y = [int(e) for e in input().split()] อ่านจำนวนเต็ม 2 จำนวน<br><br>
+										a,b,c = [float(e) for e in input().split()] อ่านจำนวนจริง 3 จำนวน<br><br>
+										-หากจะอ่านจำนวนจริงตามด้วยจำนวนเต็ม ก็อ่านเป็นสตริงก่อน โดยใช้คำสั่ง f,n = input().split()
+										แล้วจึงค่อยแปลงเป็นจำนวนจริงกับจำนวนเต็ม โดยใช้คำสั่ง f = float(f); n = int(n)
+									</div></p>
 								<h1><strong>Comments</strong></h1>
 								<p>สัญลักษณ์คอมเม้นต์ข้อความในภาษาไพธอน คือ เครื่องหมาย # โดยหากเครื่องหมายนี้อยู่หน้าบรรทัดใด ขณะรันโปรแกรมไพธอนก็จะไม่นำบรรทัดนั้นมารัน<br>
 									<img src="images/comment.png"/>
@@ -222,9 +204,9 @@
 	padding: 20px;
 }
 .text1 {
-	background-color: rgb(128, 89, 112);
-	color : rgb(241, 241, 241);
-	border: 2px solid rgb(37, 29, 36);
+	background-color: rgb(139, 215, 250);
+	color : rgba(10, 7, 8, 0.651);
+	border: 2px solid rgb(235, 45, 209);
 	margin: 20px;
 	padding: 20px;
 }
