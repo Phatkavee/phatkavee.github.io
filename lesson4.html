@@ -19,8 +19,8 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1>Generic</h1>
-						<p>Ipsum dolor sit amet nullam</p>
+						<h1>LESSON 4</h1>
+						<p>String</p>
 					</header>
 
 				<!-- Main -->
@@ -28,12 +28,57 @@
 
 						<!-- Content -->
 							<section id="content" class="main">
-								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
-								<h2>Magna feugiat lorem</h2>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis fames ac ante ipsum primis in faucibus.</p>
-								<p>Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Consequat leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit enim turpis lorem ipsum dolor sit amet feugiat. Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet est velit quis lorem.</p>
-								<h2>Tempus veroeros</h2>
-								<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+								<p>สตริง (string) เก็บอักขระ (character) ตั้งแต่ศูนย์ตัวขึ้นไป เรียงจากซ้ายไปขวาต่อกันไป แต่ละตัวมีเลข index
+									ระบุตำแหน่ง โดย index ของตัวซ้ายสุดคือ 0 อักขระแต่ละตัวในสตริงเป็นได้ทั้งตัวอักษร ตัวเลข และสัญลักษณ์พิเศษต่าง ๆ</p>
+								<h3>การเขียนสตริงทำได้หลายแบบดังนี้</h3>
+									<div class="text">
+									•	 เขียนครอบด้วย อัญประกาศเดี่ยว 				'I am "Python".' 'I\'m Python.'<br>
+									•	 เขียนครอบด้วย อัญประกาศคู่ 				"I'm Python." "I am \"Python\"."<br>
+									•	 เขียนครอบด้วย อัญประกาศเดี่ยวสามตัวติด   	   '''I'm "Python".'''<br>
+									•	 เขียนครอบด้วย อัญประกาศคู่สามตัวติด 		  """I'm "Python"."""
+									</div>
+								</p><br>
+								<h3><strong>ตัวอย่างการเข้าใช้อักขระและสตริงย่อยในสตริง (สมมติให้ s = "ABCDEFG")</strong></h3>
+								<p> •	 len(t) ได้จำนวนตัวอักขระใน t โดย len('') ได้ 0<br><br>
+									•	 s[0] เหมือน s[-len(s)] ได้ "A" ส่วน s[-1] เหมือน s[len(s)-1] ได้ "G"<br><br>
+									•	 อย่าลืมว่า index ของสตริง s ต้องอยู่ในช่วง 0 ถึง len(s)-1 จากซ้ายไปขวา และ -1 ถึง -len(s) ถอยจากขวามาซ้าย<br>
+									ดังนั้นเราเขียน s[k] ได้ โดยที่ -len(s) ≤ k ≤ (len(s)-1) เพราะฉะนั้น "01234"[-6] กับ "01234"[5] ผิด<br><br>
+									•	 s เหมือน s[:] เหมือน s[0:] เหมือน s[:len(s)] เหมือน s[::] เหมือน s[::1]<br><br>
+									•	 s[::2] หยิบตัวที่ index คู่ได้ "ACEG", s[1::2] หยิบตัวที่ index คี่ได้ "BDF"<br><br>
+									•	 s[::-1] เหมือน s[-1::-1] เหมือน s[-1:-(len(s)+1):-1] ได้ "GFEDCBA"<br><br>
+									•	 ถ้าเขียน s[a:b] เพื่อเลือกสตริงย่อยออกมา ค่า a กับ b เป็นอะไรก็ได้ ไม่ผิด<br>
+									 "01234"[2:50000] ได้ "234", "01234"[4999:50000] ได้ ""<br>
+									"01234"[-500:-2] ได้ "012", "01234"[-3:-500:-1] ได้ "210","01234"[-500:-300] ได้ ""<br><br>
+									•	 ใช้ for c in s : เพื่อแจกแจงอักขระทีละตัวใน s จากซ้ายไปขวาเก็บในตัวแปร c นำไปใช้ในวงวนได้</p>
+								<h3><strong>ตัวอย่างการจัดการสตริง</strong></h3>
+								<div class="text">
+								    •	 s.upper() ได้สตริงที่เปลี่ยนตัวอักษรให้เป็นตัวพิมพ์ใหญ่ทั้งหมด<br>
+									•	 s.lower() ได้สตริงที่เปลี่ยนตัวอักษรให้เป็นตัวพิมพ์เล็กทั้งหมด<br>
+									•	 s.title() ได้สตริงที่เปลี่ยนตัวอักษรให้เป็นตัวพิมพ์ใหญ่ตัวแรกของแต่ละคำ<br>
+									•	 s.capitalize() ได้สตริงที่เปลี่ยนตัวอักษรให้เป็นตัวพิมพ์ใหญ่ตัวแรกของสตริง<br>
+									•	 s.swapcase() ได้สตริงที่เปลี่ยนตัวอักษรให้เป็นตัวพิมพ์ใหญ่เป็นตัวพิมพ์เล็ก และตัวพิมพ์เล็กเป็นตัวพิมพ์ใหญ่<br>
+									•	 s.center(10) ได้สตริงที่เติมช่องว่างด้านซ้ายและด้านขวาให้ครบ 10 ตัวอักษร<br>
+									•	 s.center(10,'*') ได้สตริงที่เติม * ด้านซ้ายและด้านขวาให้ครบ 10 ตัวอักษร
+								</div>
+								<br>i
+								<h3><strong>รูปแบบการประมวลผลสตริงที่พบบ่อย</strong></h3>
+								ต้องการหยิบอักขระในสตริงจากซ้ายไปขวามาประมวลผลทีละตัว<br>
+								<div class="text">
+									ต้องการนับว่าสตริง s มีตัวเลขกี่ตัว<br>
+									c = 0<br>
+									for e in s :<br>
+									<span class ='tab'></span>if '0' <= e <= '9' :<br>
+									<span class ='tab'></span><span class ='tab'></span>c += 1
+								</div>
+								ต้องการหยิบทีละตัว พร้อมกับindex ของตัวนั้น ๆ 
+								<div class="text">
+									for i in range(len(s)):<br>
+									<span class ='tab'></span>c = s[i]<br>
+									<span class ='tab'></span>print(i,c)<br>
+									หรือ<br>
+									for i,c in enumerate(s):<br>
+									<span class ='tab'></span>print(i,c)
+								</div>
 							</section>
 
 					</div>
@@ -81,3 +126,24 @@
 
 	</body>
 </html>
+
+<style>
+	.text {
+		background-color: rgb(245, 169, 213);
+		color : blue;
+		border: 2px solid rgb(229, 101, 206);
+		margin: 20px;
+		padding: 20px;
+	}
+	.text1 {
+		background-color: rgb(139, 215, 250);
+		color : rgba(10, 7, 8, 0.651);
+		border: 2px solid rgb(235, 45, 209);
+		margin: 20px;
+		padding: 20px;
+	}
+	.tab{
+		display: inline-block;
+		margin-left: 40px;
+	}
+	</style>

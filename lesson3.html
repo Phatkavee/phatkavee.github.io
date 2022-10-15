@@ -19,8 +19,8 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1>Generic</h1>
-						<p>Ipsum dolor sit amet nullam</p>
+						<h1>LESSON 3</h1>
+						<p>Repetition While For</p>
 					</header>
 
 				<!-- Main -->
@@ -28,12 +28,100 @@
 
 						<!-- Content -->
 							<section id="content" class="main">
-								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
-								<h2>Magna feugiat lorem</h2>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis fames ac ante ipsum primis in faucibus.</p>
-								<p>Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Consequat leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit enim turpis lorem ipsum dolor sit amet feugiat. Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet est velit quis lorem.</p>
-								<h2>Tempus veroeros</h2>
-								<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+								<!-- <span class="image main"><img src="images/pic04.jpg" alt="" /></span> -->
+								<h2><strong>Flowchart</strong></h2>
+								<img src="images/flow-while1.PNG"/><br><br>
+								<img src="images/flow-while2.PNG"/><br><br>
+								<img src="images/flow-for1.PNG"/><br><br>
+								<img src="images/flow-for2.PNG"/><br><br>
+								<h2><strong>range(start, stop, step)</strong></h2>
+								<p> •	 start, stop และ step ต้องเป็นจำนวนเต็ม<br>
+									•	 for k in range(10) : k = 0, 1, 2, ..., 9<br>
+									•	 for k in range(2,10) : k = 2, 3, 4, ..., 9<br>
+									•	 for k in range(2,10,2) : k = 2, 4, 6, 8<br>
+									•	 for k in range(10,1,-2) : k = 10, 8, 6, 4, 2<br>
+									•	 for k in range(11,11) : ไม่ทำสักรอบ เพราะ step เป็นบวก และ start >= stop<br>
+									•	 for k in range(9,10,-1) : ไม่ทำสักรอบ เพราะ step ติดลบ และ start <= stop</p>
+								<div class="text">
+									*** break จะย้ายการทำงานออกจากวงวนที่ break นั้นอยู่เท่านั้น<br>
+ 									for i in range(5):<br>
+									<span class ='tab'></span>for j in range(6):<br>
+									<span class ='tab'></span><span class ='tab'></span>if condition1 :<br>
+									<span class ='tab'></span><span class ='tab'></span><span class ='tab'></span>break<span class ='tab'></span># break นี้ออกจาก for j<br>
+									<span class ='tab'></span>if condition2 :<br>
+									<span class ='tab'></span><span class ='tab'></span><span class ='tab'></span>break<span class ='tab'></span># break นี้ออกจาก for i
+								</div><br>
+								<p>เมื่อต้องการทำอะไรบางอย่างซ้ำกัน n ครั้ง ใช้ for k in range(n)</p>
+								<div class="text">
+									เช่น ต้องการอ่านข้อมูลจำนวน 10 ตัว เพื่อหาค่าเฉลี่ย<br>
+									s = 0<br>
+									for k in range(10) :<span class ='tab'></span># เป็นแค่คำสั่งควบคุมจำนวนรอบการทำซ้ำ<br>
+									<span class ='tab'></span>a = float(input())<br>
+									<span class ='tab'></span>s += a<br>
+									print('average =', (s/10))
+								</div>
+								<br>
+								<p>เมื่อต้องการประมวลผลชุดคำสั่งซ้ำ ๆ จนกว่าเงื่อนไขหนึ่งจะเป็นจริง ใช้ while หรือใช้ if break ในวงวน</p>
+								<div class="text">
+									เช่น ต้องการหาค่าเฉลี่ยจากชุดข้อมูลที่ผู้ใช้ป้อนเข้ามาเรื่อย ๆ จนกว่าจะรับจำนวนติดลบ<br>
+									s = 0<br>
+									n = 0<br>
+									while True :<br>
+									<span class ='tab'>t = float(input())<br>
+									if t < 0 : break<br>
+									s += t<br>
+									n += 1</span><br>
+									if n == 0 :<br>
+									<span class ='tab'></span>print('No Data')<br>
+									else :<br>
+									<span class ='tab'></span>print('avg =',(s/n))
+								</div>
+								<div class="text">
+									s = 0<br>
+									n = 0<br>
+									t = float(input())<br>
+									while t >= 0 :<br>
+									<span class ='tab'>s += t<br>
+									n += 1<br>
+									t = float(input())</span><br>
+									if n == 0 :<br>
+									<span class ='tab'></span>print('No Data')<br>
+									else :<br>
+									<span class ='tab'></span>print('avg =',(s/n))
+								</div>
+								<br>
+								<p>ลืมปรับค่าของตัวแปรที่ใช้ในเงื่อนไขของ while หรือไม่ก็ปรับค่าผิด ความผิดพลาดแบบนี้อาจทำให้วนทำงานไม่สิ้นสุด</p>
+								<div class="text">
+									เช่น ต้องการวนรับจำนวนจากผู้ใช้ มาหาค่าเฉลี่ยจนกว่าจะพบจำนวนลบ<br>
+									s = n = 0<br>
+									t = float(input())<br>
+									while t >= 0 :<br>
+									<span class = "tab">s += t<br>
+									n += 1</span><br>
+									print('avg =', (s/n))<br>
+									ใช้ t ในการตรวจสอบเงื่อนไขของ while แต่ค่า t ไม่ได้เปลี่ยนแปลงเลยในวงวน ควรแก้เป็น<br>
+									s = n = 0<br>
+									t = float(input())<br>
+									while t >= 0 :<br>
+									<span class = "tab">s += t<br>
+									n += 1<br>
+									t = float(input()) # เพิ่มบรรทัดนี้</span><br>
+									print('avg =', (s/n))<br>
+								</div>
+								<br>
+								<p>การปรับค่า k ภายในวงวน for k in range(...) จะไม่มีผลต่อการเปลี่ยนค่า k ในรอบถัดไป<br>
+									เพราะฉะนั้น ถ้าต้องการปรับค่าของ k ในวงวน ต้องใช้วงวน while แทน</p>
+								<img src="images/for1.PNG"/>
+								<p>ถ้าต้องการเปลี่ยน k ต้องใช้ while</p>
+								<img src="images/for2.PNG"/><br><br>
+								<h2><strong>Nested Loop</strong></h2>
+								<img src="images/loop1.png"/><br><br>
+								<h2><strong>For</strong></h2>
+								<img src="images/loop2.png"/><br><br>
+								<h2><strong>While</strong></h2>
+								<img src="images/loop3.png"/><br><br>
+								<h2><strong>Sentinel</strong></h2>
+								<img src="images/loop4.png"/>
 							</section>
 
 					</div>
@@ -81,3 +169,24 @@
 
 	</body>
 </html>
+
+<style>
+	.text {
+		background-color: rgb(245, 169, 213);
+		color : blue;
+		border: 2px solid rgb(229, 101, 206);
+		margin: 20px;
+		padding: 20px;
+	}
+	.text1 {
+		background-color: rgb(139, 215, 250);
+		color : rgba(10, 7, 8, 0.651);
+		border: 2px solid rgb(235, 45, 209);
+		margin: 20px;
+		padding: 20px;
+	}
+	.tab{
+		display: inline-block;
+		margin-left: 40px;
+	}
+	</style>
