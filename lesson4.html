@@ -60,7 +60,7 @@
 									•	 s.center(10) ได้สตริงที่เติมช่องว่างด้านซ้ายและด้านขวาให้ครบ 10 ตัวอักษร<br>
 									•	 s.center(10,'*') ได้สตริงที่เติม * ด้านซ้ายและด้านขวาให้ครบ 10 ตัวอักษร
 								</div>
-								<br>i
+								<br>
 								<h3><strong>รูปแบบการประมวลผลสตริงที่พบบ่อย</strong></h3>
 								ต้องการหยิบอักขระในสตริงจากซ้ายไปขวามาประมวลผลทีละตัว<br>
 								<div class="text">
@@ -79,6 +79,34 @@
 									for i,c in enumerate(s):<br>
 									<span class ='tab'></span>print(i,c)
 								</div>
+								ต้องการหยิบอักขระในสตริงจากขวามาซ้ายทีละตัว
+								<div class="text">
+									for e in s[::-1] :<br>
+									...
+								</div>
+								ถ้าต้องการนับว่ามี t ปรากฏอยู่ใน s กี่ครั้ง<br>
+								<div class="text">
+									c = 0<br>
+									k = s.find(t)<br>
+									while k >= 0 :<br>
+									<span class ='tab'></span>c += 1<br>
+									<span class ='tab'></span>k = s.find(t,k+1)
+								</div>
+								ใช้สตริงสะสมข้อมูลเพื่อนนำมาแสดงทีหลัง
+								<div class="text">
+									หาจำนวนเฉพาะที่มีค่าน้อยกว่า 30<br>
+									result = ""<br>
+									for n in range(2,30):<br>
+									<span class ='tab'></span>for k in range(2, n) :<br>
+									<span class ='tab'></span><span class ='tab'></span>if n % k == 0 : break<br>
+									<span class ='tab'></span>else:<br>
+									<span class ='tab'></span><span class ='tab'></span>result += str(n) + ", "<br>
+									print(result[:-2]) ได้ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29
+								</div>
+								<br>
+								<img src="images/string.png"/>
+								<br><br>
+								<img src="images/string2.png"/>
 							</section>
 
 					</div>
