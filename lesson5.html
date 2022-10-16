@@ -19,8 +19,8 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1>Generic</h1>
-						<p>Ipsum dolor sit amet nullam</p>
+						<h1>LESSON 5</h1>
+						<p>Function</p>
 					</header>
 
 				<!-- Main -->
@@ -28,12 +28,34 @@
 
 						<!-- Content -->
 							<section id="content" class="main">
-								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
-								<h2>Magna feugiat lorem</h2>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis fames ac ante ipsum primis in faucibus.</p>
-								<p>Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Consequat leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit enim turpis lorem ipsum dolor sit amet feugiat. Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet est velit quis lorem.</p>
-								<h2>Tempus veroeros</h2>
-								<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+								<p id="content" class="main">
+									<h2>การใช้งานฟังก์ชัน</h2>
+									<p>	•	 อาจเรียกว่า subprogram หรือ subroutine<br>
+										•	 เป็นการแยกส่วนคำสั่งที่ซ้ำๆ กัน หรือเข้าใจยาก ออกมาจากโปรแกรมหลัก<br>
+										•	 ทำให้โปรแกรมอ่านง่าย เข้าใจง่าย<br>
+										•	 ทำให้โปรแกรมหลักเรียกใช้ฟังก์ชันได้ โดยไม่ต้องเขียนคำสั่งหลายรอบ<br>
+										•	 ฟังก์ชันควรมีหน้าที่การทำงานชัดเจน เช่น ฟังก์ชันหาค่าเฉลี่ยของจำนวนในลิสต์ ฟังก์ชันกลับสตริง เป็นต้น<br>
+										•	 ต้องเขียนฟังก์ชันไว้ก่อนส่วนที่จะเรียกใช้</p>
+									<br>
+									<h2>องค์ประกอบของฟังก์ชัน</h2>
+									<img src="images/fuction1.png"/>
+									<br><br>
+									<h2>การคืนการทำงานจากฟังก์ชันและการคืนค่าจากฟังก์ชัน</h2>
+									<p>	•	 สามารถใช้คำสั่ง return ได้หลายที่ในฟังก์ชัน<br>
+										•	 เมื่อทำคำสั่ง return แล้ว จะหยุดการทำงานของฟังก์ชันทันที และกลับไปทำงานต่อหลังจุดที่เรียกใช้ฟังก์ชัน<br>
+										•	 ฟังก์ชันคืนค่าได้ 1 ค่าเท่านั้น ถ้าต้องการคืนหลายค่า ให้ใช้ tuple เช่น return (answer1, answer2)<br>
+										•	 หากคำสั่งสุดท้ายของฟังก์ชันไม่ใช่ return ระบบจะเพิ่มคำสั่ง return (ไม่คืนค่าใด ๆ) ที่ท้ายฟังก์ชัน<br>
+										•	 คำสั่ง return ที่ไม่ได้กำหนดให้คืนค่าใด ๆ ระบบจะคืนค่า None (None เป็นค่าพิเศษในระบบ ไม่ใช่สตริง 'None')</p>
+									<br>
+									<h2>ตัวแปรในฟังก์ชัน (local variables)</h2>
+									<p>	•	 ตั้งชื่อซ้ำกับตัวแปรในฟังก์ชันอื่นได้ ถือว่าเป็นคนละตัวแปรกัน<br>
+										•	 เรียกใช้ตัวแปรในฟังก์ชันอื่นไม่ได้<br>
+										•	 หากส่งตัวแปรประเภท int, float, string, boolean เข้ามาในฟังก์ชัน จะถือว่าเป็นคนละตัวกัน<br>
+										•	 หากส่งตัวแปรประเภท list, dict, set เข้ามาในฟังก์ชัน<br>
+										ถ้ามีการแก้ค่าในฟังก์ชัน ตัวแปรเดิมของผู้เรียกฟังก์ชันจะเปลี่ยนค่าด้วย</p>
+									<h2>ฟังก์ชันเวียนเกิด</h2>
+									<img src="images/fuction2.png"/>
+									
 							</section>
 
 					</div>
