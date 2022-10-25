@@ -53,9 +53,98 @@
 										•	 หากส่งตัวแปรประเภท int, float, string, boolean เข้ามาในฟังก์ชัน จะถือว่าเป็นคนละตัวกัน<br>
 										•	 หากส่งตัวแปรประเภท list, dict, set เข้ามาในฟังก์ชัน<br>
 										ถ้ามีการแก้ค่าในฟังก์ชัน ตัวแปรเดิมของผู้เรียกฟังก์ชันจะเปลี่ยนค่าด้วย</p>
-									<h2>ฟังก์ชันเวียนเกิด</h2>
-									<img src="images/fuction2.png"/>
-									
+									<h1>รูปแบบการส่งค่าอาร์กิวเมนต์ให้กับค่าพารามิเตอร์</h1>
+									<h2>การเขียนคำสั่งโปรแกรมแบบไม่มีการส่งค่าและรับค่า</h2>
+									<div class = text>
+									<p>def show_greeting1()<br>
+									<span class ='tab'></span>print('Hello')<br>
+									show_greeting1()</p>
+									</div>
+									<p><span class ='tab'></span>Hello</p>
+									<h2>การเขียนคำสั่งโปรแกรมแบบมีการส่งค่าและรับค่าแต่ไม่มีการส่งค่ากลับ</h2>
+									<div class = text>
+									<p>def show_greeting2(name)<br>
+									<span class ='tab'></span>print('Hello',name)<br>
+									show_greeting2("Doraemon")</p>
+									</div>
+									<p><span class ='tab'></span>Hello Doraemon</p>
+									<h2>การเขียนคำสั่งโปรแกรมแบบไม่มีการส่งค่าและรับค่าแต่มีการส่งค่ากลับด้วยคำสั่ง return</h2>
+									<div class = text>
+									<p>def show_greeting3()<br>
+									<span class ='tab'></span>greeting = "Hello, how are you?"<br>
+									<span class ='tab'></span>return greeting<br>
+									print(show_greeting3())</p>
+									</div>
+									<p><span class ='tab'></span>Hello , how are you?</p>
+									<h2>การเขียนคำสั่งโปรแกรมที่มีการส่งค่า-รับค่าและมีการส่งค่ากลับด้วยคำสั่ง return</h2>
+									<div class = text>
+									<p>def show_greeting4(name)<br>
+									<span class ='tab'></span>greeting_name = "Hello, " + name + "Where are you?"<br>
+									<span class ='tab'></span>return greeting_name<br>
+									print(show_greeting4("Doraemon"))</p>
+									</div>
+									<p><span class ='tab'></span>Hello, Doraemon. Where are you?</p>
+									<h2>การส่งค่าอาร์กิวเมนต์แบบ Require arguments ไปให้กับค่าพารามิเตอร์</h2>
+									<div class = text>
+									<p>def key_arg(lst, str_, num)<br>
+									<span class ='tab'></span>print(numlst)<br>
+									<span class ='tab'></span>print(num)<br>
+									<span class ='tab'></span>print(str_)<br>
+									lst = [1,2,3]; msg = "Python"<br>
+									req_arg(lst, msg, 50)<br></p>
+									</div>
+									<p><span class ='tab'></span>[1, 2, 3]<br>
+									<span class ='tab'></span>50<br>
+									<span class ='tab'></span>Python</p>
+									<h2>การส่งค่าอาร์กิวเมนต์แบบ Keyword arguments</h2>
+									<div class = text>
+									<p>def key_arg(lst, msg, num)<br>
+									<span class ='tab'></span>print(lst)<br>
+									<span class ='tab'></span>print(num)<br>
+									<span class ='tab'></span>print(msg)<br>
+									key_arg(lst=[1,2,3], num=10, msg="Python is easy")<br></p>
+									</div>
+									<p><span class ='tab'></span>[1, 2, 3]<br>
+									<span class ='tab'></span>10<br>
+									<span class ='tab'></span>Python is easy</p>
+									<h2>การส่งค่าอาร์กิวเมนต์แบบ Varible-length arguments</h2>
+									<div class = text>
+									<p>def varleng_arg(*num)<br>
+									<span class ='tab'></span>print("จำนวนข้อมูลในตัวแปร num :")<br>
+									<span class ='tab'></span>for var in num:<br>
+									<span class ='tab'></span><span class ='tab'></span>print(var, end="")<br>
+									<span class ='tab'></span>print(" ")<br>
+									<span class ='tab'></span>result = num[2] * 2<br>
+									<span class ='tab'></span>print("ผลคูณพารามิเตอร์ num[2] * 2 =", result)<br>
+									varleng_arg(10, 20, 30, 40)</p>
+									</div>
+									<p><span class ='tab'></span>จำนวนข้อมูลในตัวแปร num :<br>
+									<span class ='tab'></span>10 20 30 40<br>
+									<span class ='tab'></span>ผลคูณพารามิเตอร์ num[2] * 2 = 60</p>
+									<h1>ขอบเขตการเรียกใช้งานตัวแปร (Variable Scope)</h1>
+									<h2>การสร้างตัวแปรโกลบอลและการเรียกใช้งาน</h2>
+									<div class = text>
+									<p>r = int(input()) #ตัวแปรชนิดโกลบอล<br>
+									h = int(input()) #ตัวแปรชนิดโกลบอล<br>
+									def cylender():<br>
+									<span class ='tab'></span>volumn = 3.14 * (r * r) * h #ตัวแปรชนิดโลคอล<br>
+									<span class ='tab'></span>return volume<br>
+									print(cylender())</p>
+									</div>
+									<br>
+									<h2>การสร้างตัวแปรโลคอลขึ้นมาใช้งาน และเรียกใช้งานตัวแปรข้ามฟังก์ชัน</h2>
+									<div class = text>
+									<p>def circle_area():<br>
+									<span class ='tab'></span>global r; r = 10 #ตัวแปรชนิดโกลบอล<br>
+									<span class ='tab'></span>global pi; pi = 3.14 #ตัวแปรชนิดโกลบอล<br>
+									<span class ='tab'></span>result = pi * (r * r) #ตัวแปรชนิดโลคอล<br>
+									<span class ='tab'></span>return result<br>
+									def circumference():<br>
+									<span class ='tab'></span>result = 2 * pi * r #ตัวแปรชนิดโลคอล<br>
+									<span class ='tab'></span>return result<br>
+									print("พื้นที่วงกลม =", circle_area())<br>
+									print("เส้นรอบวง =", circumference())</p>
+									</div>
 							</section>
 
 					</div>
@@ -103,3 +192,24 @@
 
 	</body>
 </html>
+
+<style>
+	.text {
+		background-color: rgb(245, 169, 213);
+		color : blue;
+		border: 2px solid rgb(229, 101, 206);
+		margin: 20px;
+		padding: 20px;
+	}
+	.text1 {
+		background-color: rgb(139, 215, 250);
+		color : rgba(10, 7, 8, 0.651);
+		border: 2px solid rgb(235, 45, 209);
+		margin: 20px;
+		padding: 20px;
+	}
+	.tab{
+		display: inline-block;
+		margin-left: 40px;
+	}
+	</style>
