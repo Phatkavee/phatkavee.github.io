@@ -19,8 +19,8 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1>Generic</h1>
-						<p>Ipsum dolor sit amet nullam</p>
+						<h1>LESSON 6</h1>
+						<p>Files and Exceptions</p>
 					</header>
 
 				<!-- Main -->
@@ -28,12 +28,144 @@
 
 						<!-- Content -->
 							<section id="content" class="main">
-								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
-								<h2>Magna feugiat lorem</h2>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis fames ac ante ipsum primis in faucibus.</p>
-								<p>Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Consequat leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit enim turpis lorem ipsum dolor sit amet feugiat. Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet est velit quis lorem.</p>
-								<h2>Tempus veroeros</h2>
-								<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+								<h2>โหมดของไฟล์ (File mode)</h2>
+								<p>เมื่อได้สร้างไฟล์ขึ้นมาจัดเก็บข้อมูล ถ้าต้องการอ่านไฟล์หรือเขียนไฟล์จากตำแหน่งที่จัดเก็บด้วยภาษาไพทอนจะมีการระบุโหมดการอ่านและเขียนออกเป็น 2 โหมด ได้แก่ โหมดไฟล์ข้อความ และ โหมดไฟล์ไบนารี</p>
+								<br>
+								<h2>โหมดไฟล์ข้อความ (Text file mode)</h2>
+								<h4>ตัวอักษรสัญลักษณ์ที่ใช้จัดการกับไฟล์ข้อความ</h4>
+								<table>
+									<tr>
+									  <th>โหมด</th>
+									  <th><span class ='tab'></span><span class ='tab'></span><span class ='tab'></span><span class ='tab'></span><span class ='tab'></span><span class ='tab'></span><span class ='tab'></span><span class ='tab'></span><span class ='tab'></span>ความหมาย</th>
+									</tr>
+									<tr>
+									  <td>a</td>
+									  <td>เปิดไฟล์ขึ้นมาเขียนต่อท้ายไฟล์เดิม ถ้าไม่พบไฟล์ที่ระบุจะสร้างไฟล์ใหม่ขึ้นมา</td>
+									</tr>
+									<tr>
+									  <td>a+</td>
+									  <td>เปิดไฟล์ขึ้นมาอ่านและเขียนต่อท้ายไฟล์เดิม ถ้าไม่พบไฟล์ที่ระบุจะสร้างไฟล์ใหม่ขึ้นมา</td>
+									</tr>
+									<tr>
+									  <td>r</td>
+									  <td>เปิดไฟล์ขึ้นมาอ่านอย่างเดียว</td>
+									</tr>
+									<tr>
+									  <td>r+</td>
+									  <td>เปิดไฟล์ขึ้นมาอ่านและเขียน ถ้าไม่พบไฟล์ที่ระบุจะเกิด error</td>
+									</tr>
+									<tr>
+									  <td>w</td>
+									  <td>เกิดไฟล์ขึ้นมาเขียนอย่างเดียว ข้อมูลเดิมที่มีอยู่ในไฟล์จะถูกเขียนทับ ถ้าไม่พบไฟล์ที่ระบุจะสร้างไฟล์ใหม่ขึ้นมา</td>
+									</tr>
+									<tr>
+										<td>w+</td>
+										<td>เปิดไฟล์ขึ้นมาอ่านและเขียน ข้อมูลเดิมที่มีอยู่ในไฟล์จะถูกเขียนทับ ถ้าไม่พบไฟล์ที่ระบุจะสร้างไฟล์ใหม่ขึ้นมา</td>
+									</tr>
+								</table>
+								<br>
+								<h2>โหมดไฟล์ไบนารี (Binary file mode)</h2>
+								<h4>ตัวอักษรสัญลักษณ์ที่ใช้จัดการกับไฟล์ไบนารี</h4>
+								<table>
+									<tr>
+									  <th>โหมด</th>
+									  <th><span class ='tab'></span><span class ='tab'></span><span class ='tab'></span><span class ='tab'></span><span class ='tab'></span><span class ='tab'></span><span class ='tab'></span><span class ='tab'></span><span class ='tab'></span>ความหมาย</th>
+									</tr>
+									<tr>
+									  <td>ab</td>
+									  <td>เปิดไฟล์ไบนารีขึ้นมาเขียนต่อท้ายไฟล์เดิม ถ้าไม่พบไฟล์ที่ระบุจะสร้างไฟล์ใหม่ขึ้นมา</td>
+									</tr>
+									<tr>
+									  <td>ab+</td>
+									  <td>เปิดไฟล์ไบนารีขึ้นมาอ่านและเขียนต่อท้ายไฟล์เดิม ถ้าไม่พบไฟล์ที่ระบุจะสร้างไฟล์ใหม่ขึ้นมา</td>
+									</tr>
+									<tr>
+									  <td>rb</td>
+									  <td>เปิดไฟล์ไบนารีขึ้นมาอ่านอย่างเดียว</td>
+									</tr>
+									<tr>
+									  <td>rb+</td>
+									  <td>เปิดไฟล์ไบนารีขึ้นมาอ่านและเขียน ถ้าไม่พบไฟล์ที่ระบุจะเกิด error</td>
+									</tr>
+									<tr>
+									  <td>wb</td>
+									  <td>เกิดไฟล์ไบนารีขึ้นมาเขียนอย่างเดียว ข้อมูลเดิมที่มีอยู่ในไฟล์จะถูกเขียนทับ ถ้าไม่พบไฟล์ที่ระบุจะสร้างไฟล์ใหม่ขึ้นมา</td>
+									</tr>
+									<tr>
+										<td>wb+</td>
+										<td>เปิดไฟล์ไบนารีขึ้นมาอ่านและเขียน ข้อมูลเดิมที่มีอยู่ในไฟล์จะถูกเขียนทับ ถ้าไม่พบไฟล์ที่ระบุจะสร้างไฟล์ใหม่ขึ้นมา</td>
+									</tr>
+								</table>
+								<br>
+								<h2>เมธอดและฟังก์ชันสำหรับจัดการไฟล์</h2>
+								<table>
+									<tr>
+									  <th>เมธอด</th>
+									  <th>ความหมาย</th>
+									  <th>รูปแบบการใช้งาน</th>
+									</tr>
+									<tr>
+									  <td>close()</td>
+									  <td>ใช้สำหรับปิดไฟล์เพื่อบันทึกข้อมูล</td>
+									  <td>file_name.close</td>
+									</tr>
+									<tr>
+									  <td>seek()</td>
+									  <td>ใช้สำหรับระบุตำแหน่งเริ่มต้นการอ่านข้อความ</td>
+									  <td>file_name.seek(offset[, whencel])</td>
+									</tr>
+									<tr>
+									  <td>next()</td>
+									  <td>ใช้สำหรับการอ่านข้อมูลจากไฟล์ทีละบรรทัดในรูปแบบของการทำซ้ำ</td>
+									  <td>next(iterator[, default])</td>
+									</tr>
+									<tr>
+									  <td>read()</td>
+									  <td>ใช้สำหรับการอ่านไฟล์ตามขนาดข้อมูลที่ระบุ</td>
+									  <td>file_name.read(size)</td>
+									</tr>
+									<tr>
+									  <td>readline()</td>
+									  <td>ใช้สำหรับอ่านข้อความจากไฟล์ทีละบรรทัด</td>
+									  <td>file_name.readline([size])</td>
+									</tr>
+									<tr>
+										<td>readlines()</td>
+										<td>ใช้สำหรับอ่านข้อความทุกบรรทัดในไฟล์ ผลลัพธ์ที่ได้เป็นชนิดข้อมูลลิสต์</td>
+										<td>file_name.readlines([sizehint])</td>
+									  </tr>
+									  <tr>
+										<td>write()</td>
+										<td>ใช้สำหรับเขียนข้อความลงไฟล์ แต่ต้องใช้งานร่วมกับเมธอด close()</td>
+										<td>file_name.write(str)</td>
+									  </tr>
+									  <tr>
+										<td>writelines()</td>
+										<td>ใช้สำหรับเขียนข้อความแบบลำดับ</td>
+										<td>file_name.writelines(sequence)</td>
+									  </tr>
+									  <tr>
+										<td>rename()</td>
+										<td>ใช้สำหรับเปลี่ยนชื่อไฟล์ที่ต้องการ</td>
+										<td>os.remove("old_name","new_name")</td>
+									  </tr>
+									  <tr>
+										<td>remove()</td>
+										<td>ใช้สำหรับบลไฟล์ที่ต้องการ</td>
+										<td>os.remove("file_name")</td>
+									  </tr>
+								</table>
+								<br>
+								<h2>รูปแบบคำสั่งที่ใช้ในการเปิดไฟล์แบบเท็กซ์ไฟล์</h2>
+								<div class = text>
+									f = open("ไฟล์ที่ต้องการเปิดใช้งาน", "mode")<br><br>
+									f คือ ไฟล์ออบเจ็คซึ่งเก็บข้อมูลของไฟล์ที่เปิดขึ้นมา<br>
+									open() คือ คำสั่งที่ใช้สำหรับเปิดไฟล์ที่ต้องการ<br>
+									mode คือ โหมดการทำงานของเท็กซ์ไฟล์
+								</div>
+								<br>
+								<h2>TRY-EXCEPT-ELSE</h2>
+								<img src = "images/file1.jpg"/>
 							</section>
 
 					</div>
@@ -81,3 +213,31 @@
 
 	</body>
 </html>
+
+<style>
+	table, th, td {
+	  border: 1px solid black;
+	  border-collapse: collapse;
+	}
+</style>
+
+<style>
+	.text {
+		background-color: rgb(245, 169, 213);
+		color : blue;
+		border: 2px solid rgb(229, 101, 206);
+		margin: 20px;
+		padding: 20px;
+	}
+	.text1 {
+		background-color: rgb(139, 215, 250);
+		color : rgba(10, 7, 8, 0.651);
+		border: 2px solid rgb(235, 45, 209);
+		margin: 20px;
+		padding: 20px;
+	}
+	.tab{
+		display: inline-block;
+		margin-left: 40px;
+	}
+</style>
