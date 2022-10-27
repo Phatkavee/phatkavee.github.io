@@ -19,8 +19,8 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1>Generic</h1>
-						<p>Ipsum dolor sit amet nullam</p>
+						<h1>LESSON 7</h1>
+						<p>List and Turples</p>
 					</header>
 
 				<!-- Main -->
@@ -28,12 +28,150 @@
 
 						<!-- Content -->
 							<section id="content" class="main">
-								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
-								<h2>Magna feugiat lorem</h2>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis fames ac ante ipsum primis in faucibus.</p>
-								<p>Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Consequat leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit enim turpis lorem ipsum dolor sit amet feugiat. Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet est velit quis lorem.</p>
-								<h2>Tempus veroeros</h2>
-								<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+								<p>รายการหรือลิสต์ (list) เป็นที่เก็บกลุ่มของข้อมูลที่มีลำดับ แต่ละตัวมีเลข index กำกับลำดับ ตัวซ้ายสุดมี index 0</p>
+								<h2>การสร้าง List</h2>
+								<div class = text>
+									x = [] หรือ x = list() ได้ลิสต์ว่าง ๆ มี len(x) เป็น 0<br>
+									x = [0]*10 ได้ x = [0,0,0,0,0,0,0,0,0,0]<br>
+									x = list(a) ได้ลิสต์ที่มีข้อมูลตามที่หยิบออกมาจาก a (ด้วย for e in a)<br>
+									x = list('abcde') ได้ x = ['a', 'b', 'c', 'd', 'e']<br>
+									x = list(range(1,10,2)) ได้ x = [1,3,5,7,9]<br>
+								</div>
+								<br>
+								<table>
+									<tr>
+										<td>x = 2*([1,2,3] + [3,4,5]) ได้ x = [1,2,3,3,4,5,1,2,3,3,4,5]</td>
+									</tr>
+									<tr>
+										<td>x.append(e) เพิ่ม e ต่อท้าย (ทางขวา) ของลิสต์ x</td>
+									</tr>
+									<tr>
+										<td>x.insert(i, e) แทรก e ไว้ที่ index i ของลิสต์ x</td>
+									</tr>
+									<tr>
+										<td>x.pop(i) ลบข้อมูลตัวที่ index i ของลิสต์ x และคืนข้อมูลที่ถูกลบเป็นผลลัพธ</td>
+									</tr>
+									<tr>
+										<td>x.sort() ทำให้ข้อมูลในลิสต์ x เรียงจากน้อยไปมาก คำสั่งนี้ไม่มีผลคืนกลับมา</td>
+									</tr>
+									<tr>
+										<td>sorted(x) คืนลิสต์ที่มีค่าเหมือนกับที่แจงออกจาก x แต่เรียงลำดับข้อมูลจากน้อยไปมากให้เรียบร้อย (x ไม่เปลี่ยนแปลง)</td>
+									</tr>
+									<tr>
+										<td>sum(x) คืนผลรวมของจำนวนในลิสต์ x</td>
+									</tr>
+									<tr>
+										<td>max(x) คืนค่ามากสุดในลิสต์ x, min(x) คืนค่าน้อยสุดในลิสต์ x</td>
+									</tr>
+									<tr>
+										<td>x.count(e) คืนจำนวนครั้งที่ e ปรากฏในลิสต์ x</td>
+									</tr>
+									<tr>
+										<td>if e in x ใช้ตรวจสอบว่ามี e ในลิสต์ x หรือไม่</td>
+									</tr>
+									<tr>
+										<td>t.split() คืนลิสต์ของสตริงย่อยที่แยกออกจากสตริง t โดยใช้ช่องว่างเป็นตัวคั่นสตริงย่อย</td>
+									</tr>
+									<tr>
+										<td>t.split(s) คืนลิสต์ของสตริงย่อยที่แยกออกจากสตริง t โดยใช้สตริง s เป็นตัวคั่นสตริงย่อย</td>
+									</tr>
+									<tr>
+										<td>s.join(x) คืนสตริงที่ได้จากการนำสตริงในลิสต์ x มาต่อกันคั่นด้วยสตริง s</td>
+									</tr>
+								</table>
+								<br>
+								<h2>ตัวอย่างการเข้าใช้ข้อมูลและลิสต์ย่อยในลิสต์ (สมมติให้ x = [11,12,13,14,15])</h2>
+								<p> •	 มีวิธีการเข้าใช้และการเลือกลิสต์ย่อยด้วย index เหมือนกับวิธีของสตริง<br><br>
+									•	 ใช้ for e in x : ในการแจกแจงข้อมูลในลิสต์ x จากซ้ายไปขวาออกมาเก็บใน e เพื่อนำไปใช้ในวงวน for ได้<br><br>
+									•	 x[0] เหมือน x[-len(x)] ได้ 11<br><br>
+									•	 x[-1] เหมือน x[len(x)-1] ได้ 15<br><br>
+									•	 อย่าลืมว่า index ของลิสต์ x ต้องอยู่ในช่วง<br><br>
+									<span class ='tab'></span>0 ถึง len(x)-1 จากซ้ายไปขวา<br><br>
+									<span class ='tab'></span>-1 ถึง -len(x) ถอยจากขวามาซ้าย<br><br>
+									•	 x[a:b] (slice ของลิสต์) ได้ลิสต์เสมอ<br><br>
+									•	 เขียน x[a:b] ค่า a กับ b เป็นอะไรก็ได้ ไม่ผิด<br><br>
+									<span class ='tab'></span>x[2:50000] ได้ [13,14,15], x[4999:50000] ได้ []<br><br>
+									<span class ='tab'></span>x[-500:-2] ได้ [11,12,13], x[-3:-500:-1] ได้ [13,12,11], x[-500:-300] ได้ []<br><br>
+									•	 x มีค่าเหมือน x[:] เหมือน x[0:] เหมือน x[:len(s)] เหมือน x[::] เหมือน x[::1]<br><br>
+									•	 x[::2] ได้ลิสต์ย่อยเฉพาะ index คู่ x[1::2] ได้ลิสต์ย่อยเฉพาะ index คี<br><br>
+									•	 x[::-1] เหมือน x[-1::-1] เหมือน x[-1:-(len(x)+1):-1] ได้ [15,14,13,12,11]
+								</p>
+								<br>
+								<h2><strong>Tuple</strong></h2>
+								<p>ข้อมูลในทูเพิล (Tuple) สามารถซ้ำกันได้เช่นเดียวกับลิส แต่เมื่อกำหนดข้อมูลลงในทูเพิลแล้วจะไม่สามารถเปลี่ยนแปลงค่าได้</p>
+								<h3>สร้าง tuple เหมือนสร้าง list แต่ใช้วงเล็บโค้ง</h3>
+								<div class = text>
+									my_list = [1, 2.5, 3, 'A'] ได้ list<br>
+									my_tuple = (1, 2.5, 3, 'A') ได้ tuple<br>
+									my_tuple_2 = (1,) ได้ tuple ที่มีตัวเดียว (สังเกตที่ comma)<br>
+									not_a_tuple = (1) ได้จำนวนเต็ม เหมือน not_a_tuple = 1<br>
+									t1 = tuple('abc') สร้างจากสตริง ได้('a','b','c')<br>
+									t2 = tuple([1, 2, 3]) สร้างจากลิสต์ ได้(1,2,3)
+								</div>
+								<br>
+								<h3>การเข้าถึงข้อมูลทำเหมือน list</h3>
+								<div class = text>
+									my_tuple[0] ได้ 1<br>
+									my_tuple[1:3] ได้ (2.5, 3)<br>
+									my_tuple[-2:-1] ได้ (3,)<br>
+								</div>
+								<br>
+								<h3>เครื่องหมาย + ใช้ต่อ tuple<br>
+									เครื่องหมาย * ใช้ต่อ tuple หลายครั้ง</h3>
+								<div class = text>
+									a = (2, 3, 5)<br>
+									b = (7,)<br>
+									p = a + b ได้(2, 3, 5, 7)<br>
+									q = p*2 ได้(2, 3, 5, 7, 2, 3, 5, 7)<br>
+									a += (2,) เหมือนกับเขียน a = a + (2,)<br>
+									คือนำ a เดิมมาต่อกับ (2,) สร้าง tuple ใหม่<br>
+									ได้ (2, 3, 5, 2) แล้วให้ค่า tuple นี้กับตัวแปร a
+								</div>
+								<br>
+								<h3>แก้ข้อมูลใน tuple ไม่ได้ (เหมือนสตริง)</h3>
+								<div class = text>
+									my_tuple[3] = 'B' ผิด<br>
+									ถ้าต้องการเปลี่ยน ต้องตัดต่อสร้างใหม่<br>
+									my_tuple = my_tuple[:3] + ('B',) + my_tuple[4:]
+								</div>
+								<br>
+								<h3>ระบบจะแปลงสิ่งที่มี comma คั่น ให้กลายเป็น tuple<br> 
+									เช่น t = 1,2,3 เมื่อ print(t) ได้ (1, 2, 3)</h3>
+								<div class = text>
+									a,b,c = (1,2,3) ได้ a = 1, b = 2, c = 3<br>
+									x,y = 'A','Z' ได้ x = 'A', y = 'Z'<br>
+									a,x = x,a เป็นการสลับค่าในตัวแปร a กับ x
+								</div>
+								<br>
+								<h3>สามารถสร้าง list ของ tuple ได้</h3>
+								<div class = text>
+									L = [('A','B'), (1,20,300), (9.9,)] เป็น list ของ tuple<br>
+									L[1] ได้(1,20,300)<br>
+									L[1][2] ได้300
+								</div>
+								<br>
+								<h3>สามารถสร้าง tuple ของ list ได้</h3>
+								<div class = text>
+									T = (['A','B'], [1,20,300], [9.9]) เป็น tuple ของ list<br>
+									T[1] ได้ [1,20,300]<br>
+									T[1][2] ได้300<br>
+									T เป็น tuple จึงเปลี่ยน T[1] = 9 ไม่ได้<br>
+									แต่เนื่องจาก T[1] เป็นลิสต์ จึงเปลี่ยน T[1][2] = 9 ได้
+								</div>
+								<br>
+								<h3>สามารถสร้าง tuple ของ tuple ก็ได้</h3>
+								<div class = text>
+									T = ((1,2), (3,4)) เป็น tuple ของ tuple<br>
+									T[1][0] ได้ 3			
+								</div>
+								<br>
+								<h3>Example</h3>
+								<img src = "images/file3.jpg"width="800" height="500">
+								<br>
+								<img src = "images/file4.jpg"width="800" height="500">
+								<br>
+								<h3>Result</h3>
+								<img src = "images/file5.jpg"width="800" height="500">
 							</section>
 
 					</div>
@@ -81,3 +219,24 @@
 
 	</body>
 </html>
+
+<style>
+	.text {
+		background-color: rgb(245, 169, 213);
+		color : blue;
+		border: 2px solid rgb(229, 101, 206);
+		margin: 20px;
+		padding: 20px;
+	}
+	.text1 {
+		background-color: rgb(139, 215, 250);
+		color : rgba(10, 7, 8, 0.651);
+		border: 2px solid rgb(235, 45, 209);
+		margin: 20px;
+		padding: 20px;
+	}
+	.tab{
+		display: inline-block;
+		margin-left: 40px;
+	}
+</style>

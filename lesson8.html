@@ -19,8 +19,8 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1>Generic</h1>
-						<p>Ipsum dolor sit amet nullam</p>
+						<h1>LESSON 8</h1>
+						<p>Dictionary and Set</p>
 					</header>
 
 				<!-- Main -->
@@ -28,12 +28,141 @@
 
 						<!-- Content -->
 							<section id="content" class="main">
-								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
-								<h2>Magna feugiat lorem</h2>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis fames ac ante ipsum primis in faucibus.</p>
-								<p>Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Consequat leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit enim turpis lorem ipsum dolor sit amet feugiat. Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet est velit quis lorem.</p>
-								<h2>Tempus veroeros</h2>
-								<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+								<h1>Dictionary</h1>
+								<p> -ใช้เก็บข้อมูลแบบคู่อันดับ (key, value)<br>
+									-ไม่มี key ที่ซ้ำกัน หนึ่ง key มี value ที่คู่กันเพียงค่าเดียว (แต่ value อาจเป็น list, tuple, ... ที่เก็บข้อมูลย่อย ๆ ได้)<br>
+									-ถ้าเรามี key จะสามารถหา value ที่คู่กับ key ได้เร็วมาก ๆ</p>
+								<br>
+								<h2>การสร้าง dict ทำได้หลายแบบ อาจจะระบุข้อมูลที่ต้องการเก็บด้วยก็ได้</h2>
+								<div class = text>
+									dict1 = {} หรือ dict1 = dict()<br>
+									เป็นการสร้าง dict ว่าง ๆ<br>
+									dict2 = {'Name':'Tom', 'Age':39}<br>
+									เป็นการสร้าง dict ที่เก็บคู่อันดับ ('Name','Tom') และ ('Age',39)
+								</div>
+								<br>
+								<h2>สามารถเรียกใช้ แก้ไข และเพิ่ม value โดยการอ้างถึงด้วย key</h2>
+								<div class =  text>
+									D = {'Name':'Sarah'}<br>
+									print(D['Name']) ได้Sarah<br>
+									D['Age'] = 20 เป็นการเพิ่มข้อมูล ('Age',20)<br>
+									D['Name'] = 'Somsri' เป็นการแก้ข้อมูลให้เป็น ('Name','Somsri')
+								</div>
+								<br>
+								<h2>key ของ dict อาจเป็นจำนวนเต็มจำนวนจริง สตริง หรือ tuple ก็ได้<br>
+									แต่ห้ามเป็น list, dict หรือ set ส่วน value ที่คู่กับ key จะเป็นประเภทใดก็ได</h2>
+								<div class = text>
+									my_dict = {}<br>
+									my_dict[1] = 8.00<br>
+									my_dict[3.75] = [3, 7, 5]<br>
+									my_dict['Hello'] = 'World'<br>
+									my_dict[(2,99)] = 999<br>
+									my_dict[[1,2,3]] = '123' ผิด ห้ามใช้list เป็น key
+								</div>
+								<br>
+								<h2>มีบริการ keys(), values(),items() ซึ่งใช้กับ for...in ได้</h2>
+								<div class = text>
+									d = {1:7, 2:8, 3:9}<br>
+									for e in d : แจกแจงแต่ละ key ของ d ให้กับ e<br>
+									for e in d.keys() แจกแจงแต่ละ key ของ d ให้กับ e<br>
+									for e in d.values() แจกแจงแต่ละ value ของ d ให้กับ e<br>
+									for e in d.items() แจกแจงแต่ละคู่ข้อมูลของ d เป็น tuple ให้กับ e<br>
+									e[0] คือ key, e[1] คือ value<br>
+									for k,v in d.items() แจกแจง key, value ของ d ให้กับ k, v<br>
+									ลำดับของข้อมูลที่แจกแจงออกมาไม่จำเป็นต้องเหมือนกับที่เขียนหรือที่เพิ่ม
+								</div>
+								<br>
+								<h2>บริการ keys(), values() และ items() ไม่ได้ผลเป็น list แต่เป็นอะไรบางอย่างที่คล้าย list นำไปใช้กับfor...in ได้ แต่ใช้index เพือหยิบข้อมูลไม่ได้</h2>
+								<div class = text>
+									d = {'aka':'as known as', 'so':'significant other'}<br>
+									x = d.keys()<br>
+									print(x[1]) ผิด ทำไม่ได้เพราะ x ไม่ใช่ลิสต์<br>
+									ถ้าต้องการขอ key ทั้งหมดให้เป็นลิสต์จริง ๆ ต้องเขียน<br>
+									x = list( d.keys() ) ได้x เป็นลิสต์ ใช้x[1] ได้<br>
+									print(x[1]) ทำได้ (แต่ไม่รู้ว่าได้ 'aka' หรือ 'so')
+								</div>
+								<br>
+								<h2>บริการ d.update(d1) เป็นการเพิ่มข้อมูลใหม่จาก dict d1 เข้าใน d ถ้ามีkey ใน d1 ซ้ำกับใน d จะเป็นการแก้ไข value เดิม</h2>
+								<div class = text>
+									A = {1:'one', 2:'two'}<br>
+									B = {1:'nueng', 3:'sarm'}<br>
+									A.update(B) ได้A เป็น {1:'nueng', 2:'two', 3:'sarm'}<br>
+									ส่วน B ไม่เปลี่ยนแปลง
+								</div>
+								<br>
+								<h2>บริการ pop(key) เป็นการลบคู่ข้อมูลที่มีkey นั้นออก ถ้าไม่มีkey อยู่จะเกิด error</h2>
+								<div class = text>
+									C = {1: 'one', 2: 'two', 3: 'three'}<br>
+									x = C.pop(1) ได้x = 'one', C = {2:'two', 3:'three'}<br>
+									y = C.pop(4) เกิด error
+								</div>
+								<br>
+								<h1>Set</h1>
+								<p> -เหมือนกับเซตทางคณิตศาสตร์ เซตไม่เก็บข้อมูลซ้ำ สามารถ union, intersect ได้<br>
+									-เหมือนกับ dict แบบที่เก็บแค่ key ไม่มี value (เพราะ key ไม่ซ้ำกัน)<br>
+									-การค้นด้วย in สามารถทำได้เร็วมาก ๆ</p>
+								<br>
+								<h2>การสร้างเซต สามารถสร้างเซตจากข้อมูลใน string, tuple, list, set หรือ dict ได้</h2>
+								<div class = text>
+									set_1 = set() ได้เซตว่าง<br>
+									set_2 = {1, 2, 3} ได้เซตที่มีสมาชิกเป็น 1, 2, 3<br>
+									set_3 = set('Hello') ได้เซต {'H','e','l','o'}<br>
+									set_4 = set(['oh', 'no']) ได้เซต {'oh', 'no'}<br>
+									set_5 = set(set_2) ได้เซตใหม่มีสมาชิกเหมือนของ set_2<br>
+									set_6 = set({1:2, 3:4}) ได้เซตของ key ของ dict คือ {1,3}
+								</div>
+								<br>
+								<h2>บริการ add(e) ใช้เพิ่มข้อมูล 1 ตัว ถ้าเพิ่มตัวที่ซ้ำกับที่มีอยู่ใน set ก็ไม่เพิ่มให้</h2>
+								<div class = text>
+									S = {1}<br>
+									S.add((2, 3)) ได้ {1, (2, 3)}<br>
+									S.add('Hello') ได้ {1, (2, 3), 'Hello'}
+								</div>
+								<br>
+								<h2>บริการ update(t) ใช้เพิ่มข้อมูลที่แจกแจงได้จาก t ที่เป็นกลุ่มข้อมูล ซึ่งเป็นได้ทั้งstring, tuple, list, set และdict (ในกรณีของ dict จะเพิ่ม key)คำสั่ง s.update(t) ทำงานเหมือนคำสั่ง<br>
+									for e in t :<br>
+									<span class ='tab'></span>s.add(e)</h2>
+								<div class = text>
+									S = {1}<br>
+									S.add((2, 3)) ได้ {1, (2, 3)}<br>
+									S.add('Hello') ได้ {1, (2, 3), 'Hello'}
+								</div>
+								<br>
+								<h2>การใช้e in S เพื่อตรวจสอบความเป็นสมาชิกของ e ในเซต S</h2>
+								<div class = text>
+									S = {1, 2, 3, 'H', 'e', 'l', 'o'}<br>
+									x = 1 in S ได้ x = True<br>
+									y = 'h' in S ได้ y = False
+								</div>
+								<br>
+								<h2>บริการ remove(e) และ discard(e)เพื่อลบข้อมูล ถ้าไม่มีข้อมูลที่ต้องการจะลบremove() จะเกิด errorดังนั้นควรใช้discard()</h2>
+								<div class = text>
+									S = {1, 2, 3, 'H', 'e', 'l', 'o'}<br>
+									S.discard(1) เหลือ {2, 3, 'H', 'e', 'l', 'o'}<br>
+									S.discard(4) เหลือเท่าเดิม ไม่เกิด error<br>
+									S.remove('e') เหลือ {2, 3, 'H', 'l', 'o'}<br>
+									S.remove('h') เกิด error เพราะไม่เจอ 'h'
+								</div>
+								<br>
+								<h2>การดำเนินการของ set</h2>
+								<p> union() หรือใช้สัญลักษณ์ |<br>
+									intersection() หรือใช้สัญลักษณ์ &<br>
+									difference() หรือใช้สัญลักษณ์ –<br>
+									(A B) – (A B) หรือใช้สัญลักษณ์ ^<br>
+									โดยเซตที่มากระทำกัน จะไม่เปลี่ยนแปลง</p>
+								<div class = text>
+									a = {1, 2, 3}<br>
+									b = {2, 3, 4}<br>
+									c = a.union(b) หรือ c = a | b<br>
+									ได้ c = {1, 2, 3, 4}<br>
+									c = a.intersection(b) หรือ c = a & b<br>
+									ได้ c = {2, 3}<br>
+									c = a.difference(b) หรือ c = a - b<br>
+									ได้ c = {1}<br>
+									c = b.difference(a) หรือ c = b - a<br>
+									ได้ c = {4}<br>
+									c = a ^ b ได้ c = {1, 4}
+								</div>
 							</section>
 
 					</div>
@@ -81,3 +210,24 @@
 
 	</body>
 </html>
+
+<style>
+	.text {
+		background-color: rgb(245, 169, 213);
+		color : blue;
+		border: 2px solid rgb(229, 101, 206);
+		margin: 20px;
+		padding: 20px;
+	}
+	.text1 {
+		background-color: rgb(139, 215, 250);
+		color : rgba(10, 7, 8, 0.651);
+		border: 2px solid rgb(235, 45, 209);
+		margin: 20px;
+		padding: 20px;
+	}
+	.tab{
+		display: inline-block;
+		margin-left: 40px;
+	}
+</style>
